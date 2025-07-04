@@ -1,9 +1,24 @@
-import '/style.css'
+import './style.css'
 
 const Footer = () => {
 
     return (
         <>
+            <div className="footer">
+                <div className="logo-footer">
+                    <div className="wrap-logo-f">
+                        <a href="" className="logo-link">
+                            <img src="/Logo.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div className="text-footer">
+                    <p className="text">
+                        © AIVoice 2025<br />
+                        Все права защищены
+                    </p>
+                </div>
+            </div>
         </>
     )
 }
