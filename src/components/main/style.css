@@ -1,0 +1,147 @@
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d2d7e1;
+    color: black;
+}
+
+.wrap-main{
+    width: 1250px;
+    background-color: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.title-main{
+    padding: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Inconsolata', monospace;
+}
+
+.voice-container{
+    width: 90%;
+    gap:33px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.voice-settings{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-settings{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+.lg-set{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    gap:10px
+}
+.icon-s{
+    width: 40px;
+    height: 30px;
+}
+.icon-s img{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.name-s{
+    text-align: center;
+    font-size: 18px;
+    padding-right: 5px;
+    font-family: 'Mulish';
+}
+
+.btn-s{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+.btn-s:hover{
+    .btn-s-R {
+        color:gray;
+    }
+}
+
+.right-settings{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: end;
+}
+
+.speed-set{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid black;
+    gap:10px
+}
+
+.text-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.textbox{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.count-symbol{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

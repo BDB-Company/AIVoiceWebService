@@ -117,7 +117,7 @@ input[type='file'] {
 
     font-family: 'Source Sans Pro';
     src: url('public/font/SourceSansPro-Bold.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    font-weight: 400;
+    font-weight: 600;
 }
 @font-face {
 
