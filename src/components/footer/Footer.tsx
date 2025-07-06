@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="logo-footer">
                     <div className="wrap-logo-f">
                         <a href="" className="logo-link">
-                            <img src="/Logo.png" alt=""/>
+                            <img src="/LOGO.jpeg" alt=""/>
                         </a>
                     </div>
                 </div>

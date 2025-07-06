@@ -19,7 +19,7 @@
     justify-content: start;
 }
 .title-main{
-    padding: 100px;
+    padding: 150px 0 100px 0;
     width: 100%;
     height: auto;
     display: flex;
@@ -86,7 +86,7 @@
     text-align: center;
     font-size: 18px;
     padding-right: 5px;
-    font-family: 'Mulish';
+    font-family: 'Mulish', serif;
 }
 
 .btn-s{
@@ -139,9 +139,96 @@
     height: 300px;
     border-radius: 10px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+
+}
+.clear-input{
+    width: 98%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+.clear-input:hover{
+    .btn-clear{
+        color: grey;
+    }
 }
 .count-symbol{
+    font-family: 'Mulish', serif;
     width: 100%;
     display: flex;
     justify-content: end;
+}
+.voice-actions{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap:200px;
+}
+.btn-sub{
+    width: 180px;
+    height: 50px;
+    background: rgb(57, 81, 202);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    gap: 10px;
+    font-family: 'Mulish', serif;
+}
+
+.btn-sub:hover{
+    background-color: rgb(27, 47, 152);
+}
+
+.icon-btn-sub{
+    width: 40px;
+    height: 40px;
+}
+.icon-btn-sub img{
+    max-width: 100%;
+}
+
+.wrap-btn-save{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap:25px;
+}
+
+.format{
+    height: 50px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #808080;
+    font-family: 'Mulish', serif;
+    font-size: 18px;
+}
+.btn-s2{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+}
+.btn-s2:hover{
+    .btn-s-R{
+        color:gray;
+    }
 }

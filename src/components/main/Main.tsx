@@ -1,7 +1,23 @@
 import './style.css'
 import { RiArrowDropDownLine } from "react-icons/ri";
+import MultiInput from "../multiInput/MultiInput.tsx";
+import {type ChangeEvent, useState} from "react";
+import { RiDeleteBinLine } from "react-icons/ri";
 
 const Main = () => {
+
+    const [text, setText] = useState<string>("");
+    const [countSymbol, setCountSymbol] = useState<number>(0);
+
+    const onChange = (e:ChangeEvent<HTMLTextAreaElement>) => {
+        setText(e.target.value);
+        setCountSymbol(e.target.value.length);
+    };
+
+    const onClear = () => {
+        setText("");
+        setCountSymbol(0);
+    }
 
     return (
         <>
@@ -50,14 +66,37 @@ const Main = () => {
                         </div>
                         <div className="text-wrap">
                             <div className="textbox">
-                                <input type="text" className="input-text"/>
-                                <div className="clear-input"></div>
+                                <MultiInput text={text} onChange={onChange} />
+                                <div className="clear-input">
+                                    <RiDeleteBinLine size='25px' className="btn-clear" onClick={onClear}/>
+                                </div>
                             </div>
                             <div className="count-symbol">
-                                <p className="count">Кол-во символов: 200</p>
+                                <p className="count">Кол-во символов: {countSymbol}</p>
                             </div>
                         </div>
-                        <div className="voice-actions"></div>
+                        <div className="voice-actions">
+                            <button className="btn-sub">
+                                <div className="icon-btn-sub">
+                                    <img src="/Воспроизведение.svg" alt=""/>
+                                </div>
+                                <div className="text-btn-sub">Озвучить</div>
+                            </button>
+                            <div className="wrap-btn-save">
+                                <button className="btn-sub" style={{paddingRight:'20px', width:'210px'}}>
+                                    <div className="icon-btn-sub">
+                                        <img src="/Скачать.png" alt=""/>
+                                    </div>
+                                    <div className="text-btn-sub">Сохранить</div>
+                                </button>
+                                <div className="format">
+                                    <p className="name-format">mp3</p>
+                                    <div className="btn-s2">
+                                        <RiArrowDropDownLine size='35px' className="btn-s-R"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
