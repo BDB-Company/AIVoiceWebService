@@ -1,0 +1,11 @@
+services:
+  front:
+    container_name: AIVoice
+    image: aivoice
+    build:
+      context: .
+    ports:
+      - "5333:5333"
+    restart: always
+
+
