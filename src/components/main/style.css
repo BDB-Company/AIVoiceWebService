@@ -69,8 +69,17 @@
     justify-content: center;
     border-radius: 10px;
     border: 1px solid black;
-    gap:10px
+    gap:10px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none; /* Для Safari и старых версий Chrome */
+    -moz-user-select: none; /* Для Firefox */
+    -ms-user-select: none;
 }
+.lg-set,.speed-set:hover{
+    border: 1px solid #bab9b9;
+}
+
 .icon-s{
     width: 40px;
     height: 30px;
@@ -98,11 +107,7 @@
     width: 40px;
     height: 40px;
 }
-.btn-s:hover{
-    .btn-s-R {
-        color:gray;
-    }
-}
+
 
 .right-settings{
     width: 50%;
@@ -123,7 +128,12 @@
     justify-content: space-between;
     border-radius: 10px;
     border: 1px solid black;
-    gap:10px
+    gap:10px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none; /* Для Safari и старых версий Chrome */
+    -moz-user-select: none; /* Для Firefox */
+    -ms-user-select: none;
 }
 
 .text-wrap{
@@ -136,7 +146,7 @@
 }
 .textbox{
     width: 100%;
-    height: 300px;
+    height: 320px;
     border-radius: 10px;
     border: 1px solid black;
     display: flex;
@@ -148,6 +158,7 @@
 }
 .clear-input{
     width: 98%;
+    padding-bottom: 10px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -231,4 +242,12 @@
     .btn-s-R{
         color:gray;
     }
+}
+
+.wrap-select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
