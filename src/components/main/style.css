@@ -165,10 +165,8 @@
     justify-content: end;
     align-items: center;
 }
-.clear-input:hover{
-    .btn-clear{
-        color: grey;
-    }
+.btn-clear:hover{
+    color: grey;
 }
 .count-symbol{
     font-family: 'Mulish', serif;
@@ -184,6 +182,7 @@
     align-items: start;
     justify-content: start;
     gap:200px;
+    padding-bottom: 120px;
 }
 .btn-sub{
     width: 180px;
@@ -229,6 +228,7 @@
     border: 1px solid #808080;
     font-family: 'Mulish', serif;
     font-size: 18px;
+    cursor: pointer;
 }
 .btn-s2{
     cursor: pointer;
@@ -238,11 +238,6 @@
     align-items: center;
     width: 35px;
 }
-.btn-s2:hover{
-    .btn-s-R{
-        color:gray;
-    }
-}
 
 .wrap-select{
     display: flex;
@@ -250,4 +245,16 @@
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.wrap-format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none; /* Для Safari и старых версий Chrome */
+    -moz-user-select: none; /* Для Firefox */
+    -ms-user-select: none;
 }

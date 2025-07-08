@@ -1,17 +1,22 @@
 import "./style.css"
+import type {IDropdownProps} from "../../../models/interfaces/IDropdownProps.ts";
+import {DropdownItems} from '../../../models/collections/DropdownItems.ts';
 
-const Lg = () => {
+const Lg = ({ref}:IDropdownProps) => {
+
     return (
         <>
-            <div className="wrap-select-lg-s">
+            <div className="wrap-select-lg-s" ref={ref}>
                 <div className="line-select"></div>
                 <ul className="list-lg">
-                    <li className="list-lg-item">
-                        <div className="icon-item">
-                            <img src="/Flag_of_Russia.svg.png" alt=""/>
-                        </div>
-                        <div className="name-item">Русский</div>
-                    </li>
+                    {DropdownItems.Lg.name.map((item,index) => (
+                        <li key={item} className="list-lg-item">
+                            <div className="icon-item">
+                                <img src={DropdownItems.Lg.iconSrc[index]} alt=""/>
+                            </div>
+                            <div className="name-item">{item}</div>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </>

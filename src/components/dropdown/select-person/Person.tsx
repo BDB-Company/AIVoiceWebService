@@ -1,15 +1,20 @@
-const Person = () => {
+import type {IDropdownProps} from "../../../models/interfaces/IDropdownProps.ts";
+import {DropdownItems} from "../../../models/collections/DropdownItems.ts";
+
+const Person = ({ref}:IDropdownProps) => {
     return (
         <>
-            <div className="wrap-select-lg-s">
+            <div className="wrap-select-lg-s" ref={ref}>
                 <div className="line-select" style={{marginTop:'8px'}}></div>
                 <ul className="list-lg">
-                    <li className="list-lg-item" style={{paddingLeft:'14px'}}>
-                        <div className="icon-item">
-                            <img src="/user.png" alt=""/>
-                        </div>
-                        <div className="name-item">Айдар</div>
-                    </li>
+                    {DropdownItems.Person.name.map((item,index) => (
+                        <li key={item} className="list-lg-item" style={{paddingLeft:'14px'}}>
+                            <div className="icon-item">
+                                <img src={DropdownItems.Person.iconSrc[index]} alt=""/>
+                            </div>
+                            <div className="name-item">{item}</div>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </>
