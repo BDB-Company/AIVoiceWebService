@@ -1,4 +1,9 @@
+import type {ISettingValue} from "./ISettingValue.ts";
+
 export interface IDropdownItems {
-    name: string[];
-    iconSrc: string[] | '';
+    Lg: ISettingValue[],
+    Person: ISettingValue[],
+    Speed: ISettingValue[],
+    Volume: ISettingValue[],
+    Format: ISettingValue[],
 }
