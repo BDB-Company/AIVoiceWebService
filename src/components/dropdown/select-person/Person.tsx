@@ -4,7 +4,7 @@ import {useActions} from "../../../hooks/useActions.ts";
 
 const Person = ({ref}:IDropdownProps) => {
 
-    const {updatePerson, toggleDropdown} = useActions()
+    const {updatePerson, toggleDropdown, setChange} = useActions()
 
     return (
         <>
@@ -12,7 +12,7 @@ const Person = ({ref}:IDropdownProps) => {
                 <div className="line-select" style={{marginTop:'8px'}}></div>
                 <ul className="list-lg">
                     {DropdownItems.Person.map((item) => (
-                        <li key={item.name} className="list-lg-item" style={{paddingLeft:'14px'}} onClick={() => {updatePerson(item.name);toggleDropdown(0)}}>
+                        <li key={item.name} className="list-lg-item" style={{paddingLeft:'14px'}} onClick={() => {updatePerson(item.value);toggleDropdown(0);setChange(true)}}>
                             <div className="icon-item">
                                 <img src={item.iconSrc} alt=""/>
                             </div>

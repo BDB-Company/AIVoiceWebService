@@ -1,7 +1,8 @@
 export interface IAudioSetState {
-    lg: string,
-    person: string,
-    speed: string,
+    language: string,
+    gender: string,
     volume: string,
+    speed: string,
     format: string,
+    text: string,
 }

@@ -6,8 +6,8 @@ export const DropdownItems:IDropdownItems = {
         {name: 'Англиский', iconSrc: 'Flag_of_England.svg', value:'en'}
     ],
     Person:[
-        {name: 'Мужчина', iconSrc: '/user_men.png', value:'men'},
-        {name: 'Женщина', iconSrc: '/user_girl.png', value:'girl'}
+        {name: 'Мужчина', iconSrc: '/user_men.png', value:'male'},
+        {name: 'Женщина', iconSrc: '/user_girl.png', value:'female'}
     ],
     Speed:[
         {name: '0.5',iconSrc:'', value:'0.5'},
@@ -33,11 +33,12 @@ export const DropdownItems:IDropdownItems = {
         {name: '-25',iconSrc:'', value:'-15'},
         {name: '-10',iconSrc:'', value:'-10'},
         {name: '-5',iconSrc:'', value:'-5'},
-        {name: '5',iconSrc:'', value:'5'},
-        {name: '10',iconSrc:'', value:'10'},
-        {name: '15',iconSrc:'', value:'15'},
-        {name: '20',iconSrc:'', value:'20'},
-        {name: '25',iconSrc:'', value:'25'},
+        {name: '0',iconSrc:'', value:'0'},
+        {name: '+5',iconSrc:'', value:'+5'},
+        {name: '+10',iconSrc:'', value:'+10'},
+        {name: '+15',iconSrc:'', value:'+15'},
+        {name: '+20',iconSrc:'', value:'+20'},
+        {name: '+25',iconSrc:'', value:'+25'},
     ],
     Format:[
         {name: 'mp3', iconSrc: '', value:'mp3'},

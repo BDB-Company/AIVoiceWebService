@@ -1,11 +1,66 @@
 services:
-  front:
-    container_name: AIVoice
-    image: aivoice
+
+  web:
+    image: aivoiceweb
     build:
-      context: .
+      context: AIVoiceWebService
     ports:
       - "5333:5333"
-    restart: always
 
+  api:
+    image: aivoiceapi
+    build:
+      context: AIVoiceApiService
+    ports:
+      - "5444:5444"
 
+  tts:
+    build: ./AIVoiceTTSService
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=A123!
+#
+#
+#services:
+#  front:
+#    image: front
+#    build:
+#      context: client
+#    depends_on:
+#      - backend
+#    expose:
+#      - "3222"
+#    ports:
+#      - "3222:3222"
+#    restart: always
+#  backend:
+#    image: server_backend
+#    build:
+#      context: server
+#    depends_on:
+#      db:
+#        condition: service_healthy
+#    env_file:
+#      server/.env
+#    command: npm start
+#    ports:
+#      - "5222:5222"
+#    restart: always
+#  db:
+#    image: postgres:16.0-alpine
+#    environment:
+#      POSTGRES_PASSWORD: postgres
+#      POSTGRES_USER: postgres
+#      POSTGRES_DB: postgres
+#    healthcheck:
+#      test: ["CMD-SHELL", "pg_isready -U postgres"]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5
+#    volumes:
+#      - db_data:/var/lib/postgresql/data

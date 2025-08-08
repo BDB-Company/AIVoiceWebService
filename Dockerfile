@@ -1,12 +1,14 @@
-FROM node:19-alpine
+FROM --platform=linux/arm64 node:19-alpine
 
-WORKDIR .
+WORKDIR /client
 
 COPY package*.json .
 
 RUN npm install
 
 COPY . .
+
+RUN npm install @stomp/stompjs
 
 RUN npm run build
 

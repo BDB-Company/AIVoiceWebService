@@ -3,9 +3,15 @@ import type {IDropdownProps} from "../../../models/interfaces/IDropdownProps.ts"
 import {DropdownItems} from '../../../models/collections/DropdownItems.ts';
 import {useActions} from "../../../hooks/useActions.ts";
 
-const Lg = ({ref}:IDropdownProps) => {
+type IChange = {
+    onClear: () => void,
+}
 
-    const {updateLg, toggleDropdown} = useActions()
+type DropdownComponentProps = IDropdownProps & IChange;
+
+const Lg = ({ref, onClear}:DropdownComponentProps ) => {
+
+    const {updateLg, toggleDropdown, setChange} = useActions()
 
     return (
         <>
@@ -13,7 +19,7 @@ const Lg = ({ref}:IDropdownProps) => {
                 <div className="line-select"></div>
                 <ul className="list-lg">
                     {DropdownItems.Lg.map((item) => (
-                        <li key={item.name} className="list-lg-item" onClick={() => {updateLg(item.name);toggleDropdown(0)}}>
+                        <li key={item.name} className="list-lg-item" onClick={() => {updateLg(item.value); toggleDropdown(0); setChange(true);onClear()}}>
                             <div className="icon-item">
                                 <img src={item.iconSrc} alt=""/>
                             </div>

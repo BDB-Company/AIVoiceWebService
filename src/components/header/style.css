@@ -102,3 +102,28 @@
     font-weight: bold;
     color: black;
 }
+
+.wrap-but-info{
+    width: 150px;
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Mulish';
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(57, 81, 202);
+}
+.info:hover{
+    background: #035de5;
+}

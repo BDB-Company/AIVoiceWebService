@@ -2,11 +2,12 @@ import {createSlice, type PayloadAction} from "@reduxjs/toolkit";
 import type {IAudioSetState} from "../../models/interfaces/IAudioSetState.ts";
 
 const initialState: IAudioSetState = {
-    lg:'Русский',
-    person:'Мужчина',
+    language:'ru',
+    gender:'male',
+    volume:'0',
     speed:'1',
-    volume:'10',
     format:'mp3',
+    text:'',
 }
 
 export const audioSetSlice = createSlice({
@@ -14,10 +15,10 @@ export const audioSetSlice = createSlice({
     initialState,
     reducers: {
         updateLg(state, action: PayloadAction<string>) { // {payload:lg}
-            state.lg = action.payload
+            state.language = action.payload
         },
         updatePerson(state, action: PayloadAction<string>) { // {payload:person}
-            state.person = action.payload
+            state.gender = action.payload
         },
         updateSpeed(state, action: PayloadAction<string>) {
             state.speed = action.payload
@@ -27,6 +28,9 @@ export const audioSetSlice = createSlice({
         },
         updateFormat(state, action: PayloadAction<string>) {
             state.format = action.payload
+        },
+        updateText(state, action: PayloadAction<string>) {
+            state.text = action.payload
         }
     },
 })

@@ -10,7 +10,7 @@
 }
 
 .wrap-main{
-    width: 1250px;
+    max-width: 1250px;
     background-color: #ffffff;
     height: 100%;
     display: flex;
@@ -203,12 +203,19 @@
     gap: 10px;
     font-family: 'Mulish', serif;
 }
-
+.btn-sub:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+}
 .btn-sub:hover{
     background-color: rgb(27, 47, 152);
 }
 
 .icon-btn-sub{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
 }
@@ -301,3 +308,21 @@
     font-size: 16px;
     font-family: 'Mulish', serif;
 }
+
+.voice-panel{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+}
+
+.audioPlayer{
+    width: 50%;
+    color-scheme: white;
+}
+/*audio::-webkit-media-controls-download-button {*/
+/*    -webkit-appearance: none;*/
+/*    display: none;*/
+/*}*/

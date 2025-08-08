@@ -97,32 +97,32 @@ input[type='file'] {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    src: url('public/font/InterTight-ExtraLight.ttf') format('woff2')
+    src: url('/public/font/InterTight-ExtraLight.ttf') format('woff2')
 }
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 600;
-    src: url('public/font/mulish-medium.ttf') format('truetype');
+    src: url('/public/font/mulish-medium.ttf') format('truetype');
 }
 @font-face {
     font-display: swap;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 500;
-    src: url('public/font/mulish-bold.ttf') format('truetype');
+    src: url('/public/font/mulish-bold.ttf') format('truetype');
 }
 @font-face {
 
     font-family: 'Source Sans Pro';
-    src: url('public/font/SourceSansPro-Bold.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('/public/font/SourceSansPro-Bold.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     font-weight: 600;
 }
 @font-face {
 
     font-family: 'Source Sans Pro';
-    src: url('public/font/SourceSansPro-Light.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('/public/font/SourceSansPro-Light.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     font-weight: 400;
 }
 html {
@@ -133,7 +133,7 @@ body {
     color: #fff;
     /* Растягиваем body по высоте html */
     min-height: 100%;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: scroll;
 }
 
@@ -146,4 +146,5 @@ body {
     justify-content: start;
     flex-wrap: nowrap;
     position: relative;
+    font-family: 'Inconsolata', monospace;
 }

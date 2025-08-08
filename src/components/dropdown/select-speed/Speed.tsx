@@ -4,7 +4,7 @@ import {useActions} from "../../../hooks/useActions.ts";
 
 const Speed = ({ref}:IDropdownProps) => {
 
-    const {updateSpeed, toggleDropdown} = useActions()
+    const {updateSpeed, toggleDropdown, setChange} = useActions()
 
     return (
         <>
@@ -12,7 +12,7 @@ const Speed = ({ref}:IDropdownProps) => {
                 <div className="line-select"></div>
                 <ul className="list-lg">
                     {DropdownItems.Speed.map((item) => (
-                        <li key={item.name} className="list-lg-item" onClick={() => {updateSpeed(item.name);toggleDropdown(0)}}>
+                        <li key={item.name} className="list-lg-item" onClick={() => {updateSpeed(item.value);toggleDropdown(0);setChange(true)}}>
                             <div className="name-item" style={{paddingLeft:'10px'}}>{item.name}</div>
                         </li>
                     ))}

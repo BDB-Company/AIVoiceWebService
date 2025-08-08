@@ -4,15 +4,15 @@ import {useActions} from "../../../hooks/useActions.ts";
 
 const Volume = ({ref}:IDropdownProps) => {
 
-    const {updateVolume, toggleDropdown} = useActions()
+    const {updateVolume, toggleDropdown, setChange} = useActions()
 
     return (
         <>
             <div className="wrap-select-lg-s" ref={ref} style={{width:'237px'}}>
                 <div className="line-select"></div>
                 <ul className="list-lg">
-                    {DropdownItems.Volume.map((item) => (
-                        <li key={item.name} className="list-lg-item" onClick={() => {updateVolume(item.name);toggleDropdown(0)}} style={{width:'237px'}}>
+                    {DropdownItems.Volume.map((item,index) => (
+                        <li key={index} className="list-lg-item" onClick={() => {updateVolume(item.value);toggleDropdown(0);setChange(true)}} style={{width:'237px'}}>
                             <div className="name-item" style={{paddingLeft:'12px'}}>{item.name} dB</div>
                         </li>
                     ))}
