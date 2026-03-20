@@ -9,12 +9,6 @@
 - **Лица с нарушениями зрения и дислексией** — преобразование текстовой информации в аудиоформат.
 - **Иностранные студенты** — аудирование учебных материалов на русском и английском языках.
 
-## Языки
-
-![TypeScript](https://img.shields.io/badge/-TypeScript-000?&logo=TypeScript)
-![HTML](https://img.shields.io/badge/-HTML-000?&logo=html5)
-![CSS](https://img.shields.io/badge/-CSS-000?&logo=css)
-
 ## Технологии
 
 ![Docker](https://img.shields.io/badge/-Docker-000?&logo=Docker)
