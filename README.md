@@ -14,6 +14,10 @@
 ![Docker](https://img.shields.io/badge/-Docker-000?&logo=Docker)
 ![Node.js](https://img.shields.io/badge/-Node.js-000?&logo=node.js)
 ![React](https://img.shields.io/badge/-React-000?&logo=React)
+ 
+## Запуск
 
 
-
+```bash
+docker compose up -d
+```
